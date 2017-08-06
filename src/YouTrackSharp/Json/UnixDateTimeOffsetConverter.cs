@@ -15,11 +15,11 @@ namespace YouTrackSharp.Json
         {
             if (value is DateTimeOffset)
             {
-                writer.WriteValue(((DateTimeOffset)value).ToUnixTimeSeconds());
+                writer.WriteValue(((DateTimeOffset)value).ToUnixTimeMilliseconds());
             }
             else if (value is DateTime)
             {
-                writer.WriteValue(new DateTimeOffset((DateTime)value).ToUnixTimeSeconds());
+                writer.WriteValue(new DateTimeOffset((DateTime)value).ToUnixTimeMilliseconds());
             }
             else
             {
